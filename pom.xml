@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.klymovych</groupId>
-	<artifactId>market-place</artifactId>
+	<artifactId>marketplace</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>market-place</name>
@@ -19,6 +19,7 @@
 		<module>order-service</module>
 		<module>product-service</module>
         <module>discovery-server</module>
+        <module>api-gateway</module>
     </modules>
     <properties>
 		<java.version>17</java.version>
