@@ -27,7 +27,7 @@ public class OrderService {
 
     private final WebClient.Builder webClientBuilder;
 
-    public void placeOrder(OrderRequest request) {
+    public String placeOrder(OrderRequest request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
 
@@ -53,6 +53,7 @@ public class OrderService {
 
         if (allProductsInStock) {
             repository.save(order);
+            return "Order Placed";
         } else {
             throw new IllegalArgumentException("Please try again later");
         }
